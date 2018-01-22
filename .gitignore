@@ -1,0 +1,6 @@
+# hashtags comment our stuff out
+
+node_modules 
+.DS_Store
+*.psd #this will ignore the psd files. works 
+assets/ #ignores the assets files

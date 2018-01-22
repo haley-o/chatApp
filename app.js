@@ -1,0 +1,22 @@
+
+const express = require('express');
+const app = express();
+
+// this is a route. this points at the homepage / root
+app.get('/', (req, res) => {
+	res.sendFile(__dirname + '/index.html');
+});
+
+// set up a contact route
+app.get('/contact', (req, res) => {
+	res.sendFile(__dirname + '/contact.html');
+});
+
+// setup a portfolio route
+app.get('/portfolio', (req, res) => {
+	res.sendFile(__dirname + '/portoflio.html');
+});
+
+app.listen(3000, () => {
+	console.log('app running on port 3000');
+});
