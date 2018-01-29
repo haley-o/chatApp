@@ -2,5 +2,6 @@
 
 node_modules 
 .DS_Store
+.sass-cache
 *.psd #this will ignore the psd files. works 
 assets/ #ignores the assets files
