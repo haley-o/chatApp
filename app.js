@@ -28,11 +28,15 @@ io.attach(server);
 
 io.on('connection', (socket) => {
 	console.log('a user has connected');
-	io.emit('connectMsg', { 
-		for: 'everyone', msg : '${socket.id} is here!'
+	io.emit('chat message', { for: 'everyone', message : `${socket.id} is here!`});
+
+	socket.on('chat message', msg => {
+		io.emit('chat message', { for: 'everyone', message : msg});
 	});
 
 	socket.on('disconnect', () => {
-		console.log('a user has disconnected')
+		console.log('a user has disconnected');
+
+	io.emit('disconnect message', `${socket.id} has left the building`);
 	});
 });
