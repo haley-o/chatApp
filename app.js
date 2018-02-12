@@ -37,6 +37,6 @@ io.on('connection', (socket) => {
 	socket.on('disconnect', () => {
 		console.log('a user has disconnected');
 
-	io.emit('disconnect message', `${socket.id} has left the building`);
+		io.emit('disconnect message', `${socket.id} has left the building`);
 	});
 });
