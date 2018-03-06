@@ -63,7 +63,6 @@
 		let newMsg = `<li>${msg.message}</li>`;
 		messageList.innerHTML += newMsg;
 
-		// console.log(message);
 		console.log(socket.id);
 		console.log(newMsg);
 	}
